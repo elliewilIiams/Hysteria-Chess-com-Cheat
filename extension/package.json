@@ -1,0 +1,13 @@
+{
+  "name": "hysteria-chesscom",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/content.ts --bundle --outfile=dist/content.js --format=iife",
+    "watch": "esbuild src/content.ts --bundle --outfile=dist/content.js --format=iife --watch"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.4",
+    "typescript": "5.8.3"
+  }
+}

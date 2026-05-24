@@ -1,0 +1,33 @@
+#hysteria-panel {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 99999;
+  width: 220px;
+  background: rgba(8,8,8,0.94);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 12px;
+  backdrop-filter: blur(14px);
+  padding: 10px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #f3f3f3;
+}
+.hp-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(226,226,226,0.63);
+  margin-bottom: 8px;
+}
+.hp-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 4px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.hp-best { background: rgba(0,200,83,0.12); }
+.hp-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.hp-score { color: rgba(0,200,83,0.9); font-family: Consolas, monospace; font-size: 12px; }
+.hp-empty { color: rgba(226,226,226,0.5); font-size: 12px; }

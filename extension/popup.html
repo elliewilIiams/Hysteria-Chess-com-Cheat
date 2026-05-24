@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    :root {
+      --bg: #020202;
+      --panel: rgba(8,8,8,0.92);
+      --line: rgba(255,255,255,0.09);
+      --text: #f3f3f3;
+      --muted: rgba(226,226,226,0.63);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 280px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      padding: 14px;
+    }
+    .brand {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.025);
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .brand svg { width: 32px; height: 32px; color: var(--text); }
+    .brand-name { font-size: 18px; font-weight: 800; letter-spacing: 0.08em; }
+    .status-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--panel);
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+    .status-card span { color: var(--muted); font-size: 11px; text-transform: uppercase; }
+    .status-card strong { display: block; margin-top: 6px; font-size: 14px; }
+    .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+    .dot-on { background: #00cc77; }
+    .dot-off { background: #ff5a5a; }
+    button {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      padding: 10px;
+      font: inherit;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button:hover { background: rgba(255,255,255,0.1); }
+    button.active { background: #fff; color: #080808; border-color: #fff; }
+  </style>
+</head>
+<body>
+  <div class="brand">
+    <svg viewBox="0 0 640 360" fill="currentColor">
+      <path d="M320 36 347 64 347 128 492 98 565 62 518 116 408 140 407 176 470 204 508 245 430 226 372 170 378 220 414 292 372 232 350 186 350 321 320 356 290 321 290 186 268 232 226 292 262 220 268 170 210 226 132 245 170 204 233 176 232 140 122 116 75 62 148 98 293 128 293 64z"/>
+    </svg>
+    <span class="brand-name">HYSTERIA</span>
+  </div>
+
+  <div class="status-card">
+    <span>Status</span>
+    <strong><span class="dot dot-on" id="dot"></span><span id="status-text">Active</span></strong>
+  </div>
+
+  <div class="status-card">
+    <span>Delay (ms)</span>
+    <input type="number" id="delay" value="500" min="100" step="100" style="margin-top:6px;width:100%;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.09);border-radius:8px;color:#f3f3f3;padding:7px 8px;font:inherit;">
+  </div>
+
+  <button id="toggle">Disable</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

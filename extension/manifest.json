@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Hysteria Chess",
+  "version": "1.0.0",
+  "description": "Chess analysis overlay for Chess.com",
+  "permissions": ["storage"],
+  "host_permissions": ["http://127.0.0.1:5267/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.chess.com/*"],
+      "js": ["dist/content.js"],
+      "css": ["dist/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
